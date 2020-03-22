@@ -1,7 +1,7 @@
 <template>
     <button
         :class="[border ? 'bg-transparent border border-main' : 'bg-main']"
-        class="text-white font-bold text-2xl uppercase px-6 py-2 rounded-full"
+        class="text-white font-bold text-2xl uppercase px-10 py-2 rounded-full w-full md:w-auto"
     >
         {{ title }}
         <slot></slot>

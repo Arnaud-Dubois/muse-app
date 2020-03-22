@@ -13,7 +13,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { href:"https://fonts.googleapis.com/css?family=Montserrat&display=swap", rel:"stylesheet"}
+      { href:"https://fonts.googleapis.com/css?family=Galdeano|Montserrat:400,700&display=swap", rel:"stylesheet"}
     ]
   },
   /*

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center m-20">
+    <div class="flex flex-wrap justify-center m-0 md:m-20">
         <TestimonialUser
             :key="user.name"
             v-for="user in users"

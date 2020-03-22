@@ -1,8 +1,8 @@
 <template>
-    <div class="w-1/6 text-center mx-8 pt-20 pb-10">
+    <div class="w-full md:w-1/6 text-center md-0 md:mx-8 pt-20 pb-10">
         <h5 class="text-6xl font-bold">{{ step }}.</h5>
         <h4 class="text-3xl mb-6">{{ title }}</h4>
-        <p>
+        <p class="text-2xl">
             <slot></slot>
             {{ desc }}
         </p>

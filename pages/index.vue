@@ -1,25 +1,26 @@
 <template>
   <div class="container">
+
+    <!-- Header -->
     <header class="header w-full">
-      <div class="flex">
-        <div class="w-1/2">
-          <h1>A futuristic look at the past</h1>
-          <h2>Education to future-proof your career</h2>
-          
-          <BaseButton>Explore</BaseButton>
-          <BaseButton border>Museums</BaseButton>
+      <div class="flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2 p-6">
+          <h1 class="text-4xl pt-16">A futuristic look at the past</h1>
+          <p class="text-2xl">Education to future-proof your career</p>
+
+          <BaseButton class="mt-6">Explore</BaseButton>
+          <BaseButton class="mt-6" border>Museums</BaseButton>
         </div>
-        <div class="w-1/2">
-
-          <img src="~/static/images/angel-header.png" alt="angel">
-
+        <div class="w-full md:w-1/2">
+          <img src="~/static/images/angel-header.png" alt="angel" width="100%" height="100%">
         </div>
       </div>
     </header>
 
-    <BaseSection color class="py-40">
-      <h2 class="text-5xl font-bold">How muse app works</h2>
-      <div class="flex justify-center">
+    <!-- How does it works -->
+    <BaseSection color class="px-6 py-40">
+      <h2 class="text-4xl font-bold">How muse app works</h2>
+      <div class="flex flex-col md:flex-row justify-center">
         <BaseCard
           :key="card.title"
           v-for="card in cards"
@@ -33,21 +34,24 @@
       </div>
     </BaseSection>
 
-    <BaseSection :image="'images/state-of-the-art.jpg'" class="py-40">
-      <div class="container">
-        <h2 class="text-5xl font-bold">State of the art<br> at your fingertips</h2>
-        <p class="text-2xl">
+    <!-- State of the Art -->
+    <BaseSection :image="'images/state-of-the-art.jpg'">
+      <div class="container p-6 py-40">
+        <h2 class="text-4xl font-bold mb-8">State of the art<br> at your fingertips</h2>
+        <p class="text-2xl mb-8">
           MUSEAPP is an application for YOU to access art and culture freely in one single swoop. Just download the app and start visiting thousand years of history.
         </p>
         <BaseButton>Download</BaseButton>
       </div>
     </BaseSection>
 
+    <!-- An immersive experience -->
     <BaseSection color :image="'images/naissance-venus.png'">
-      <div class="flex">
-        <div class="w-1/2 bg-purple-600 text-left py-40">
-          <h2 class="text-5xl font-bold">AN IMMERSIVE<br> EXPERIENCE</h2>
-          <p class="text-2xl">
+      <div class="flex flex-col-reverse md:flex-row">
+
+        <div class="w-full md:w-1/2 bg-main-gradient text-left py-40 p-6">
+          <h2 class="text-4xl font-bold mb-8">An immersive<br> Experience</h2>
+          <p class="text-2xl mb-8">
             Thanks to the VR technology, our museums provides an unique way of discovering the state of the art
           </p>
           <BlackButton>
@@ -56,53 +60,64 @@
             </a>
           </BlackButton>
         </div>
-        <div class="w-1/2 relative text-left">
-          <WhiteCard class="absolute w-3/4 h-3/4 mt-10 -ml-8">
-            <h3 class="text-3xl mb-32">Tangible knowledge</h3>
-            <BigNumber class="absolute" number="1."/>
+
+        <div class="w-full md:w-1/2 relative text-left">
+          <WhiteCard class="relative md:absolute w-3/4 h-3/4 mt-0 md:mt-10 ml-0 md:-ml-8">
+            <h3 class="text-3xl mb-0 md:mb-32">Tangible knowledge</h3>
+            <BigNumber class="relative md:absolute" number="1."/>
           </WhiteCard>
           <img class="absolute bottom-0 right-0 w-2/3" src="images/vr-headset-guy.png" alt="VR guy" width="100%" height="100%">
+        </div>
+
+      </div>
+    </BaseSection>
+
+    <!-- Form: filter your search -->
+    <BaseSection :image="'images/louvre.png'">
+      <div class="flex flex-col-reverse md:flex-row h-screen py-40">
+
+        <div class="w-full md:w-1/2">
+          <WhiteCard class="text-left w-full md:w-auto relative md:absolute top-0 left-0 m-0 md:m-24">
+            <h3 class="text-5xl font-bold">Filter your search</h3>
+            <form>
+              
+              <div class="my-4">
+                <label class="block" for="">Type of museum</label>
+                <input type="text" class="p-3 border border-purple-400 rounded-full">
+              </div>
+              
+              <div class="my-4">
+                <label class="block" for="">Location</label>
+                <input type="text" class="p-3 border border-purple-400 rounded-full">
+              </div>
+
+              <BaseButton>Find a museum</BaseButton>
+
+            </form>
+          </WhiteCard>
+        </div>
+        
+        <div class="w-full md:w-1/2">
+          <h2 class="text-6xl font-bold">Find your way</h2>
         </div>
       </div>
     </BaseSection>
 
-    <BaseSection :image="'images/louvre.png'" class="py-40">
-      <div class="h-screen">
-        <WhiteCard class="text-left absolute top-0 left-0 m-24">
-          <h3 class="text-5xl font-bold">Filter your search</h3>
-          <form>
-            
-            <div class="my-4">
-              <label class="block" for="">Type of museum</label>
-              <input type="text" class="p-3 border border-purple-400 rounded-full">
-            </div>
-            
-            <div class="my-4">
-              <label class="block" for="">Location</label>
-              <input type="text" class="p-3 border border-purple-400 rounded-full">
-            </div>
-
-            <BaseButton>Find a museum</BaseButton>
-
-          </form>
-        </WhiteCard>
-        <h2 class="text-6xl font-bold">FIND YOUR WAY</h2>
-      </div>
-    </BaseSection>
-
+    <!-- Testimonials -->
     <BaseSection color class="py-40">
-      <h2 class="text-5xl font-bold">Testimonials</h2>
+      <h2 class="text-4xl font-bold">Testimonials</h2>
       <div class="container mx-auto">
         <Testimonial/>
       </div>
     </BaseSection>
 
+    <!-- Museums Tour -->
     <BaseSection class="py-40">
-      <div class="flex container">
-        <div class="w-1/2">
-          <GraphPhone/>
+      <div class="flex flex-col-reverse md:flex-row container">
+        <div class="w-full md:w-1/2">
+          <GraphPhone class="w-full"/>
         </div>
-        <div class="w-1/2">
+        <div class="w-full md:w-1/2">
           <h2 class="text-5xl font-bold">Museums Tour</h2>
           <BulletPoint>
             <p>Watch what the parkour of others musers and follow their instructions about the plan</p>
@@ -117,12 +132,19 @@
       </div>
     </BaseSection>
 
-    <BaseSection color class="py-40">
-      <h2 class="text-5xl font-bold">Download the App</h2>
-      <h5 class="text-2xl">Choose your support</h5>
-      <BlackButton>Google Play</BlackButton>
+    <!-- Download links -->
+    <BaseSection color class="py-40 p-6">
+      <h2 class="text-4xl font-bold">Download the App</h2>
+      <h5 class="text-2xl mb-8">Choose your support</h5>
+      <BlackButton class="mb-4">Google Play</BlackButton>
       <BlackButton>App Store</BlackButton>
     </BaseSection>
+
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
     
   </div>
 </template>
@@ -178,6 +200,7 @@ $text-color: #ACACAC;
 
 // Fonts
 $main-font: 'Montserrat', sans-serif;
+$sub-font: 'Galdeano', sans-serif;
 
 
 .bg-main {
@@ -195,7 +218,7 @@ $main-font: 'Montserrat', sans-serif;
 
 body {
   background-color: $bg-color-main;
-  font-family: $main-font!important;
+  font-family: $main-font;
   color: $text-color;
 }
 
@@ -203,6 +226,15 @@ h1 {
   color: $text-white;
   font-size: 4rem;
   font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+p {
+  font-family: $sub-font;
 }
 
 .container {
