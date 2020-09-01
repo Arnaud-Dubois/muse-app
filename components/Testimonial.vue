@@ -1,11 +1,14 @@
 <template>
-    <div class="flex flex-wrap justify-center m-0 md:m-20">
+    <div class="flex flex-wrap justify-center m-0 md:m-4">
         <TestimonialUser
             :key="user.name"
             v-for="user in users"
             :user="user"
         >
-            <div class="mt-6 absolute inset-x-0">
+            <div class="relative inset-x-0">
+                <div v-if="user.isFocus" class="my-8">
+                    <div class="text-2xl text-bold">{{ user.name }}</div>
+                </div>
                 <div v-if="user.isFocus" class="flex justify-center my-4">
                     <StarIcon
                         :key="index"
@@ -14,7 +17,7 @@
                     />
                 </div>
             </div>
-            <div class="mt-20 absolute inset-x-0">
+            <div class="relative inset-x-0">
                 <transition name="fade">
                     <div v-if="user.isFocus">
                         <div class="text-2xl">"{{ user.testimonial }}"</div>
@@ -38,11 +41,11 @@ export default {
     data() {
         return {
             users: [
-                { isFocus: true, src: 'images/persona-man-01.jpg', ratings: 1, alt: 'profile', name: 'John', testimonial: 'It\'as great App to visit museums.'},
-                { isFocus: false, src: 'images/persona-man-02.jpg', ratings: 2, alt: 'profile', name: 'Johny', testimonial: 'The ultimate experience of art !'},
-                { isFocus: false, src: 'images/persona-woman-01.jpg', ratings: 3, alt: 'profile', name: 'Jane', testimonial: 'MuseAPP is the best app to look for museum guidance !'},
-                { isFocus: false, src: 'images/persona-man-03.jpg', ratings: 4, alt: 'profile', name: 'Jack', testimonial: 'I love MuseAPP, Super app !'},
-                { isFocus: false, src: 'images/persona-woman-02.jpg', ratings: 5, alt: 'profile', name: 'Jill', testimonial: 'Another one please :)'}
+                { isFocus: true, src: 'images/persona-man-01.jpg', ratings: 4, alt: 'profile', name: 'Mark', testimonial: 'It\'as great App to visit museums.'},
+                { isFocus: false, src: 'images/persona-man-02.jpg', ratings: 5, alt: 'profile', name: 'Gabriel', testimonial: 'The ultimate experience of art !'},
+                { isFocus: false, src: 'images/persona-woman-01.jpg', ratings: 5, alt: 'profile', name: 'Jane', testimonial: 'MUSA is the best app to look for museum guidance !'},
+                { isFocus: false, src: 'images/persona-man-03.jpg', ratings: 4, alt: 'profile', name: 'Alex', testimonial: 'I love MUSA, Super app !'},
+                { isFocus: false, src: 'images/persona-woman-02.jpg', ratings: 5, alt: 'profile', name: 'Jill', testimonial: 'Met a lot of people there. Great app :)'}
             ]
         }
     },
