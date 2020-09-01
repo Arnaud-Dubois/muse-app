@@ -50,7 +50,7 @@ export default {
             var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
 
             // The first parameter can be used to specify which mesh to import. Here we import all meshes
-            BABYLON.SceneLoader.Append("/mesh_models/", "statue_woman_model.glb", scene, function (newMeshes) {
+            BABYLON.SceneLoader.Append("/mesh_models/", "statue_woman_model_40k.glb", scene, function (newMeshes) {
                 scene.createDefaultCameraOrLight(true, true, true);
                 scene.activeCamera.useAutoRotationBehavior = true;
                 scene.activeCamera.lowerRadiusLimit = 4;

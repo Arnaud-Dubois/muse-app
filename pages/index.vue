@@ -89,8 +89,8 @@
             </p>
             <BlackButton>
               <a class="decoration-none" href="https://www.museumnext.com/article/how-museums-are-using-virtual-reality/" target="_blank">
-                <span class="mr-3">Learn more about VR</span>
-                <font-awesome-icon :icon="['fas', 'external-link-alt']"/>
+                <span class="mr-3 align-text-top">Learn more about VR</span>
+                <ExternalLinkIcon class="inline"/>
               </a>
             </BlackButton>
           </div>
@@ -141,9 +141,9 @@
               class="bg-white rounded-lg p-6 shadow-2xl"
             >
               <div class="w-full h-full rounded-lg overflow-hidden relative">
-                <font-awesome-icon style="top: 10%; left: 30%" class="absolute color-main text-4xl" :icon="['fas', 'map-marker']"/>
-                <font-awesome-icon style="top: 50%; left: 45%" class="absolute color-main text-4xl" :icon="['fas', 'map-marker']"/>
-                <font-awesome-icon style="top: 70%; left: 80%" class="absolute color-main text-4xl" :icon="['fas', 'map-marker']"/>
+                <MapMarkerIcon style="top: 10%; left: 30%" class="absolute color-main"/>
+                <MapMarkerIcon style="top: 50%; left: 45%" class="absolute color-main"/>
+                <MapMarkerIcon style="top: 70%; left: 80%" class="absolute color-main"/>
                 <img class="max-w-none" src="~/static/images/map_find_your_way.jpg" alt="map" width="964" height="844">
               </div>
             </div>
@@ -237,6 +237,8 @@ import TheLogo from '~/components/TheLogo'
 import TheFooter from '~/components/TheFooter'
 
 import DownloadIcon from '~/components/icons/DownloadIcon'
+import ExternalLinkIcon from '~/components/icons/ExternalLinkIcon'
+import MapMarkerIcon from '~/components/icons/MapMarkerIcon'
 
 export default {
   components: {
@@ -253,7 +255,9 @@ export default {
     BigNumber,
     TheLogo,
     TheFooter,
-    DownloadIcon
+    DownloadIcon,
+    ExternalLinkIcon,
+    MapMarkerIcon
   },
   data() {
     return {

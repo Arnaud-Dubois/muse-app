@@ -6,13 +6,19 @@
         <div class="flex justify-center pt-4 pb-16">
             <ul class="text-2xl text-white">
                 <li class="inline px-1">
-                    <a target="_blank" href="https://www.facebook.com/"><font-awesome-icon :icon="['fab', 'facebook']"/></a>
+                    <a target="_blank" href="https://www.facebook.com/">
+                        <FacebookIcon class="inline"/>
+                    </a>
                 </li>
                 <li class="inline px-1">
-                    <a target="_blank" href="https://twitter.com/?lang=fr"><font-awesome-icon :icon="['fab', 'twitter']"/></a>
+                    <a target="_blank" href="https://twitter.com/?lang=fr">
+                        <TwitterIcon class="inline"/>
+                    </a>
                 </li>
                 <li class="inline px-1">
-                    <a target="_blank" href="https://www.instagram.com/?hl=fr"><font-awesome-icon :icon="['fab', 'instagram']"/></a>
+                    <a target="_blank" href="https://www.instagram.com/?hl=fr">
+                        <InstagramIcon class="inline"/>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -46,10 +52,17 @@
 
 <script>
 import TheLogoWord from '~/components/TheLogoWord'
+import FacebookIcon from '~/components/icons/FacebookIcon'
+import TwitterIcon from '~/components/icons/TwitterIcon'
+import InstagramIcon from '~/components/icons/InstagramIcon'
+
 export default {
     name: 'the-footer',
     components: {
-        TheLogoWord
+        TheLogoWord,
+        FacebookIcon,
+        TwitterIcon,
+        InstagramIcon
     }
 }
 </script>
